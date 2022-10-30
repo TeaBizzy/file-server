@@ -3,7 +3,9 @@ const express = require('express');
 const server = express();
 const port = 3000;
 
-server.get("/", (req, res) => {
+
+server.use(express.static('files'));
+server.get("/files/", (req, res) => {
   res.send('Hai Werld!')
 });
 
